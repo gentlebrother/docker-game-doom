@@ -1,0 +1,10 @@
+name: "doom"
+
+on: push
+
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: ./Dockerfile
