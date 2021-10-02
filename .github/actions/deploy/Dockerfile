@@ -1,7 +1,7 @@
 FROM node:12.18.1
 
 WORKDIR site
-RUN wget https://js-dos.com/6.22/current/js-dos.js
+RUN wget --no-check-certificate https://js-dos.com/6.22/current/js-dos.js
 WORKDIR /
 COPY ./doom .
 WORKDIR /_site/
