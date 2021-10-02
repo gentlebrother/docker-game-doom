@@ -14,6 +14,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - uses: docker/build-push-action@v2
         with: 
-          context: ./.github/actions/deploy/Dockerfile
+          context: ./.github/actions/deploy/
+          file: ./Dockerfile
           push: true
           tags: user/doom:latest
