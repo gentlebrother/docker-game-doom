@@ -24,8 +24,9 @@ jobs:
       -
         name: Build and push
         id: docker_build
-        uses: ./.github/actions/deploy
+        uses: ./.github/actions/deploy/
         with:
-          file: ./github/actions/deploy/Dockerfile
+          file: ./Dockerfile
+          platforms: linux/amd64,linux/arm64
           push: true
           tags: user/doom:latest
