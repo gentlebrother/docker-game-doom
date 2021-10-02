@@ -15,6 +15,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - uses: ./.github/actions/deploy
         with: 
+          file: Dockerfile
           platforms: linux/amd64,linux/arm64
           push: true
           tags: user/doom:latest
