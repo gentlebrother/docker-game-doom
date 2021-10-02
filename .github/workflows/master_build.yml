@@ -26,5 +26,6 @@ jobs:
         id: docker_build
         uses: ./.github/actions/deploy
         with:
+          file: ./github/actions/deploy/Dockerfile
           push: true
           tags: user/doom:latest
